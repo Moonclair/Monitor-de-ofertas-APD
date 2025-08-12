@@ -1,0 +1,93 @@
+<!DOCTYPE html><html lang="es">
+<html>
+<head>
+	<meta charset="UTF-8">
+
+	<style>
+    body {
+      margin: 0;
+      height: 200px;
+      width: 320px;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f5f7fa;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 15px;
+      padding: 15px;
+      box-sizing: border-box;
+    }
+    h3 {
+      color: #333;
+      margin: 0;
+      font-size: 1.3rem;
+    }
+    button {
+      padding: 10px 20px;
+      border-radius: 8px;
+      border: none;
+      color: white;
+      font-weight: 600;
+      cursor: pointer;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      width: 100%;
+      transition: background 0.3s ease;
+      user-select: none;
+    }
+    #analizar {
+      background: linear-gradient(45deg, #6a85b6, #bac8e0);
+      box-shadow: 0 4px 8px rgba(106, 133, 182, 0.4);
+    }
+    #analizar:hover {
+      background: linear-gradient(45deg, #8a9ed8, #d1dbf3);
+    }
+    #ofertas {
+      background: linear-gradient(45deg, #4caf50, #80e27e);
+      box-shadow: 0 4px 8px rgba(76, 175, 80, 0.4);
+    }
+    #ofertas:hover {
+      background: linear-gradient(45deg, #6adf6a, #a6f9a4);
+    }
+    #estado {
+      color: #555;
+      font-style: italic;
+      margin-top: 8px;
+      font-size: 0.9rem;
+      text-align: center;
+      min-height: 1.4em;
+    }
+	#donacion {
+	  font-size: 0.85rem;
+	  color: #666;
+	  text-align: center;
+	  margin-top: 8px;
+	  font-style: italic;
+	  cursor: pointer;
+	  text-decoration: underline;
+	  transition: color 0.3s ease;
+	}
+
+	#donacion:hover {
+	  color: #007bff;
+	}
+
+  </style>
+	<title>Monitor de Ofertas APD</title>
+  
+</head>
+
+<body>
+  <h3>Monitor de ofertas APD</h3>
+  <button id="analizar">Cargar mis nomencladores</button>
+  <button id="ofertas">Ver ofertas</button>
+  <div id="donacion">
+  Si te sirvió y querés aportar, hacé click aquí
+</div>
+
+  <script src="popup.js"></script>
+</body>
+
+
+
+</html>

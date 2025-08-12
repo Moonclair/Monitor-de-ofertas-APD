@@ -1,0 +1,46 @@
+{
+  "manifest_version": 3,
+  "name": "Monitor de Ofertas APD",
+  "version": "1.0",
+  "description": "Filtra las ofertas del APD según los distritos que solicitaste y tus nomencladores. La primera vez que lo usés debés apretar el botón cargar nomencladores. Contacto del desarrollador: sebix.sebastian@hotmail.com",
+  "permissions": ["scripting", "tabs", "storage", "activeTab"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": "icon.png"
+  },
+   "icons": {
+   "16": "icon16.png",
+   "32": "icon32.png",
+   "48": "icon48.png",
+   "128": "icon128.png"
+ },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://misaplicaciones5.abc.gob.ar/postulacionAPD/ofertas*"],
+      "js": ["content-ofertas.js"]
+    },
+	{
+		"matches": ["https://misservicios.abc.gob.ar/actos.publicos.digitales/*"],
+		"js": ["content-apd.js"]
+	},
+    {
+      "matches": ["https://misservicios.abc.gob.ar/servaddo/*"],
+      "js": ["content-puntajes.js"]
+    }],
+	
+	
+    "web_accessible_resources": [ 
+    {
+      "resources": ["sobre-mi.html", "sobre-mi.js"],
+      "matches": ["<all_urls>"]
+    }
+	],
+	
+  "host_permissions": [
+    "https://misaplicaciones5.abc.gob.ar/*",
+    "https://misservicios.abc.gob.ar/*"
+  ]
+}
