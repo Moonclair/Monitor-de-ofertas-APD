@@ -5,8 +5,7 @@
   "description": "Filtra las ofertas del APD según los distritos que solicitaste y tus nomencladores. La primera vez que lo usés debés apretar el botón cargar nomencladores. Contacto del desarrollador: sebix.sebastian@hotmail.com",
   "permissions": ["scripting", "tabs", "storage", "activeTab"],
   "action": {
-    "default_popup": "popup.html",
-    "default_icon": "icon.png"
+    "default_popup": "popup.html"
   },
    "icons": {
    "16": "icon16.png",
@@ -44,3 +43,4 @@
     "https://misservicios.abc.gob.ar/*"
   ]
 }
+
